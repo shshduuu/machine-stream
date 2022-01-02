@@ -1,0 +1,40 @@
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-balham.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ag-header-row {
+  background: #dedad8;
+  color: white;
+}
+
+.ag-theme-balham .ag-row-selected,
+.ag-theme-alpine .ag-row-selected,
+.ag-theme-material .ag-row-selected {
+  background-color: #dedad8;
+}
+.ag-theme-balham input[class^='ag-'][type='text']:focus,
+.ag-theme-alpine input[class^='ag-'][type='text']:focus,
+.ag-theme-material input[class^='ag-'][type='text']:focus {
+  border-color: #727272;
+  box-shadow: 0 0 2px 1px #dedad8;
+}
+
+.ag-theme-balham [class^='ag-']:focus,
+.ag-theme-alpine [class^='ag-']:focus,
+.ag-theme-material [class^='ag-']:focus {
+  border-color: #727272;
+  box-shadow: 0 0 2px 1px #dedad8;
+}
+
+.ag-theme-balham .ag-row-hover,
+.ag-theme-alpine .ag-row-hover,
+.ag-theme-material .ag-row-hover {
+  background-color: #f2f0ef;
+}
+
+.ag-cell-focus,
+.ag-cell-no-focus {
+  border: none !important;
+}

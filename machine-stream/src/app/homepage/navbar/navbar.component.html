@@ -1,0 +1,18 @@
+<mat-toolbar class="topBar" fxLayout="row" fxLayoutAlign="center">
+    <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+      <span id="app-name">{{ appName }}</span>
+    </div>
+    <div fxFlex fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+      <div class="icon-holder">
+        <button
+            *ngFor="let button of buttons"
+            mat-icon-button
+            [matTooltip]="button.desc"
+            (click)="openNewWindow(button.link)"
+            class="header-icons"
+        >
+          <mat-icon class="header-mat-icon">{{ button.icon }}</mat-icon>
+        </button>
+      </div>
+    </div>
+</mat-toolbar>
