@@ -29,13 +29,13 @@ import { DetailsDialogComponent } from './homepage/table/details-dialog/details-
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
-    MatIconModule,
     MatTooltipModule,
     MatButtonModule,
     MatDialogModule,
+    MatIconModule,
     FlexLayoutModule,
     AgGridModule.withComponents([
-      DetailsRendererComponent
+      DetailsRendererComponent,
     ])
   ],
   providers: [],

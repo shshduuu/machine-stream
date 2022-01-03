@@ -1,5 +1,6 @@
 export const ColDefMachine = [
-    { field: 'id', headerName: 'ID', flex: 2 },
+    { field: 'id', headerName: 'ID', hide: true },
+    { field: 'action', headerName: 'events', flex: 1, cellRenderer: 'detailsRenderer', filter: false },
     { field: 'status', headerName: 'status', flex: 2 },
     { field: 'machine_type', headerName: 'machine type', flex: 2 },
     { field: 'longitude', headerName: 'longitude', flex: 2 },
@@ -7,6 +8,12 @@ export const ColDefMachine = [
     { field: 'last_maintenance', headerName: 'last maintenance', flex: 2 },
     { field: 'install_date', headerName: 'install date', flex: 2 },
     { field: 'floor', headerName: 'floor', flex: 2 },
+];
+
+export const ColDefEvent = [
+  { field: 'id', headerName: 'ID', hide: true },
+  { field: 'timestamp', headerName: 'time stamp', flex: 2 },
+  { field: 'status', headerName: 'status', flex: 1 },
 ];
 
 export const buttons = [

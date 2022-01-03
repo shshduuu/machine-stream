@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Events</h2>
+<mat-dialog-content>
+  <ag-grid-angular       
+    style="width: 100%; height: 300px"
+    class="ag-theme-balham"
+    [rowData]="rowData"
+    [columnDefs]="colDefs"
+    [gridOptions]="gridOptions"
+  >
+</ag-grid-angular>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Schließen</button>
+</mat-dialog-actions>

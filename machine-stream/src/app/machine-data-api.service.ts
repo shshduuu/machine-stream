@@ -30,7 +30,7 @@ export class MachineDataApiService {
   }
 
   getMachine(machineId: number) {
-    return this.http.get('/api/v1/machines/' + machineId)
+    return this.http.get(this.baseUrl + '/api/v1/machines/' + machineId)
     .pipe(
       map((response: any) => {
         return response.data
