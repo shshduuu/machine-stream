@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { MachineDataApiService } from 'src/app/machine-data-api.service';
+import { MachineData } from 'src/app/types';
 import { DetailsDialogComponent } from '../details-dialog/details-dialog.component';
 
 @Component({
@@ -30,7 +31,7 @@ export class DetailsRendererComponent implements ICellRendererAngularComp {
     this.openDialog(machineData);
   }
 
-  openDialog(machineData: any): void {
+  openDialog(machineData: MachineData): void {
     this.dialog.open(DetailsDialogComponent, {
       data: {
         rows: machineData.events

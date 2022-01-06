@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Button } from 'src/app/types';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   appName: string;
-  buttons = [
+  buttons: Button[] = [
     {
       name: 'helpButton',
       link: 'https://zeiss.de',

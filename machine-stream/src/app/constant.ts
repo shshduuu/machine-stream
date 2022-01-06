@@ -1,7 +1,7 @@
 export const ColDefMachine = [
     { field: 'id', headerName: 'ID', hide: true },
     { field: 'action', headerName: 'events', flex: 1, cellRenderer: 'detailsRenderer', filter: false },
-    { field: 'status', headerName: 'status', flex: 2 },
+    { field: 'status', headerName: 'status', flex: 2, cellRenderer: 'animateShowChange' },
     { field: 'machine_type', headerName: 'machine type', flex: 2 },
     { field: 'longitude', headerName: 'longitude', flex: 2 },
     { field: 'latitude', headerName: 'latitude', flex: 2 },
@@ -43,7 +43,7 @@ export const buttons = [
     },
   ];
 
-  export const rowClassRules =  {
+ const rowClassRules =  {
     "rag-green-outer"(params: { data: { status: string; }; }) {
       return params.data.status.toUpperCase() === "FINISHED";
     },

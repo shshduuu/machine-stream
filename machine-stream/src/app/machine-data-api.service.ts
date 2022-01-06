@@ -12,8 +12,7 @@ export class MachineDataApiService {
 
   constructor(
     private http: HttpClient
-  ) {
-  }
+  ) {}
 
   getAllMachines(): Observable<any> {
      return this.http.get(this.baseUrl + '/api/v1/machines/')
@@ -22,9 +21,6 @@ export class MachineDataApiService {
           return response.data
         })
       )
-      // .subscribe(res => {
-      //   this.setState( { modelOverview: res } );
-      // });
   }
 
   getMachine(machineId: number) {

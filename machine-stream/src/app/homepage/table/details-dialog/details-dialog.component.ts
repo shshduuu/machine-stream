@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ColDefEvent, gridOptions } from 'src/app/constant';
+import { EventData } from 'src/app/types';
 
 @Component({
   selector: 'app-details-dialog',
@@ -9,12 +10,12 @@ import { ColDefEvent, gridOptions } from 'src/app/constant';
 })
 export class DetailsDialogComponent {
 
-  rowData = [];
+  rowData: EventData[] = [];
   gridOptions = gridOptions;
   colDefs = ColDefEvent;
   gridApi: any;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: {rows: EventData[]}) {
     this.rowData = data.rows;
   }
 
