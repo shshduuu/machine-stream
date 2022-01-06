@@ -42,3 +42,28 @@ export const buttons = [
       desc: 'Confluence',
     },
   ];
+
+  export const rowClassRules =  {
+    "rag-green-outer"(params: { data: { status: string; }; }) {
+      return params.data.status.toUpperCase() === "FINISHED";
+    },
+    "rag-red-outer"(params: { data: { status: string; }; }) {
+      return params.data.status.toUpperCase() === "ERRORED";
+    },
+    "rag-yellow-outer"(params: { data: { status: string; }; }) {
+      return params.data.status.toUpperCase() === "REPAIRED" || params.data.status.toUpperCase() === "IDLE";
+    },
+  }
+
+  export const gridOptions = {
+    animateRows: true,
+    defaultColDef: {
+      minWidth: 100,
+      flex: 1,
+      sortable: true,
+      filter: true,
+      floatingFilter: true,
+      resizable: true,
+    },
+    rowClassRules: rowClassRules
+  };

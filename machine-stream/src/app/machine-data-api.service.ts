@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { MachineData } from './types';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +9,6 @@ import { MachineData } from './types';
 export class MachineDataApiService {
 
   baseUrl = 'http://codingcase.zeiss.services';
-
 
   constructor(
     private http: HttpClient
@@ -37,5 +35,7 @@ export class MachineDataApiService {
       })
     )
   }
+
+
 
 }

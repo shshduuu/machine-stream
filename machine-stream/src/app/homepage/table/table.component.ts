@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GridApi } from 'ag-grid-community';
-import { ColDefMachine } from 'src/app/constant';
+import { ColDefMachine, gridOptions } from 'src/app/constant';
 import { MachineDataApiService } from 'src/app/machine-data-api.service';
 import { DetailsRendererComponent } from './details-renderer/details-renderer.component';
 
@@ -12,17 +12,7 @@ import { DetailsRendererComponent } from './details-renderer/details-renderer.co
 export class TableComponent implements OnInit {
 
   rowData = [];
-  gridOptions = {
-    animateRows: true,
-    defaultColDef: {
-      minWidth: 100,
-      flex: 1,
-      sortable: true,
-      filter: true,
-      floatingFilter: true,
-      resizable: true,
-    },
-  };
+  gridOptions = gridOptions;
   colDefs = ColDefMachine;
   gridApi: GridApi | undefined;
   frameworkComponents: any;

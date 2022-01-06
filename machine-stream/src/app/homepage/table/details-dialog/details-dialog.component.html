@@ -6,6 +6,7 @@
     [rowData]="rowData"
     [columnDefs]="colDefs"
     [gridOptions]="gridOptions"
+    (gridReady)="onGridReady($event)"
   >
 </ag-grid-angular>
 </mat-dialog-content>

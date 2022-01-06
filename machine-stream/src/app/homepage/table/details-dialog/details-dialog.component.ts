@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ColDefEvent } from 'src/app/constant';
+import { ColDefEvent, gridOptions } from 'src/app/constant';
 
 @Component({
   selector: 'app-details-dialog',
@@ -10,21 +10,20 @@ import { ColDefEvent } from 'src/app/constant';
 export class DetailsDialogComponent {
 
   rowData = [];
-  gridOptions = {
-    animateRows: true,
-    defaultColDef: {
-      minWidth: 100,
-      flex: 1,
-      sortable: true,
-      filter: true,
-      floatingFilter: true,
-      resizable: true,
-    },
-  };
+  gridOptions = gridOptions;
   colDefs = ColDefEvent;
+  gridApi: any;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
     this.rowData = data.rows;
+  }
+
+  onGridReady(params: any): void {
+    this.gridApi = params.api;
+    const sortModel = [
+        {colId: 'timestamp', sort: 'desc'}
+    ];
+    this.gridApi.setSortModel(sortModel);
   }
 
 }

@@ -31,7 +31,6 @@ export class DetailsRendererComponent implements ICellRendererAngularComp {
   }
 
   openDialog(machineData: any): void {
-    console.log(machineData)
     this.dialog.open(DetailsDialogComponent, {
       data: {
         rows: machineData.events
