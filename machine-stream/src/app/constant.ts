@@ -19,25 +19,25 @@ export const ColDefEvent = [
 export const buttons = [
     {
       name: 'helpButton',
-      link: 'https://zeiss.de',
+      link: 'http://codingcase.zeiss.services/?type=frontend-xZEISSPS',
       icon: 'help_outline',
       desc: 'Support',
     },
     {
       name: 'homeButton',
-      link: 'https://zeiss.de',
+      link: 'http://zeiss.de',
       icon: 'home',
       desc: 'Homepage',
     },
     {
       name: 'messageButton',
-      link: 'https://zeiss.de',
+      link: 'http://zeiss.de',
       icon: 'textsms',
       desc: 'FAQ',
     },
     {
       name: 'infoButton',
-      link: 'https://zeiss.de',
+      link: 'http://codingcase.zeiss.services/?type=frontend-xZEISSPS',
       icon: 'info_outline',
       desc: 'Confluence',
     },

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { buttons } from 'src/app/constant';
 import { Button } from 'src/app/types';
 
 @Component({
@@ -9,32 +10,7 @@ import { Button } from 'src/app/types';
 export class NavbarComponent implements OnInit {
 
   appName: string;
-  buttons: Button[] = [
-    {
-      name: 'helpButton',
-      link: 'https://zeiss.de',
-      icon: 'help_outline',
-      desc: 'Support',
-    },
-    {
-      name: 'homeButton',
-      link: 'https://zeiss.de',
-      icon: 'home',
-      desc: 'Homepage',
-    },
-    {
-      name: 'messageButton',
-      link: 'https://zeiss.de',
-      icon: 'textsms',
-      desc: 'FAQ',
-    },
-    {
-      name: 'infoButton',
-      link: 'https://zeiss.de',
-      icon: 'info_outline',
-      desc: 'Confluence',
-    },
-  ];
+  buttons: Button[] = buttons;
 
   constructor() {
     	this.appName = 'MACHINE STREAM';
