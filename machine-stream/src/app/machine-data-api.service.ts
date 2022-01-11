@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,8 @@ export class MachineDataApiService {
       .pipe(
         map((response: any) => {
           return response.data
-        })
+        }),
+        catchError((error: HttpErrorResponse) => this.handleError(error))
       )
   }
 
@@ -28,10 +29,13 @@ export class MachineDataApiService {
     .pipe(
       map((response: any) => {
         return response.data
-      })
+      }),
+      catchError((error: HttpErrorResponse) => this.handleError(error))
     )
   }
 
-
+  handleError(error: HttpErrorResponse) {
+    return throwError(error);
+  }
 
 }
